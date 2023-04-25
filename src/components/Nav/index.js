@@ -55,7 +55,7 @@ function Navigation() {
   ];
 
   return (
-    <Navbar collapseOnSelect expand="lg" fixed="top" bg="light">
+    <Navbar collapseOnSelect expand="lg" sticky="top" bg="light">
       <Container fluid="sm">
         <Navbar.Brand href="/"><img class="logo" src={melkenLogo} alt="Melken Brand Logo"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
