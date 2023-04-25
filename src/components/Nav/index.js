@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { capitalizeFirstLetter } from '../../utils/helpers';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -10,7 +11,7 @@ function serviceSelected(name) {
   }
 
 function Navigation() {
-  const services = [
+   const [services] = useState([
     {
       name: "Project Management",
       description: "Achieve your project goals with ease and precision through Melken Solutions' proven project management approach."
@@ -50,9 +51,10 @@ function Navigation() {
     {
       name: "Document Conversion",
       description: "Unlock the full potential of your documents with Melken Solutions' comprehensive conversion solutions."
-    }
+    },
+  ]);
 
-  ];
+  const [currentService, setCurrentService] = useState(services[0]);
 
   return (
     <Navbar collapseOnSelect expand="lg" sticky="top" bg="light">
@@ -66,11 +68,13 @@ function Navigation() {
             {
               services.map((service) => (
                 <NavDropdown.Item
-                  className="mx-1"
-                  key={service.name}
+                    className={`mx-1 ${ currentService.name === service.name && 'navActive' }`}
+                    key={service.name}>
+                  <span onClick={() => {
+                    setCurrentService(service)
+                    }} 
                   >
-                    <span onClick={() => serviceSelected(service.name)} >
-                      {service.name}
+                    {capitalizeFirstLetter(service.name)}
                     </span>
                   </NavDropdown.Item>
               ))}
