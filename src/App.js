@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Navigation from './components/Nav';
 import About from './components/About';
-import ServiceGallery from './components/Services';
+import ServiceGallery from './components/ServicesGallery';
+import ServiceList from './components/ServiceList';
 
 
 function App() {
