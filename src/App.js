@@ -4,7 +4,6 @@ import About from './components/About';
 import ServiceGallery from './components/ServicesGallery';
 import ServiceList from './components/ServiceList';
 
-
 function App() {
   const [services] = useState([
     {
