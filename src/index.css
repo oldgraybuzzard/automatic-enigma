@@ -5,11 +5,11 @@ main {
 }
 
 :root {
-  --primary: #8c54ff;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
-  --light: #fafafa;
-  --dark: #000000;
+  --primary: #633594;
+  --secondary: #8B8982;
+  --tertiary: #FEC601;
+  --light: #FBFFF1;
+  --dark: #0F1108;
   --darker: #111111;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -34,12 +34,12 @@ body {
   line-height: 1.5;
   font-size: 18px;
   letter-spacing: .1em;
-  background: var(--dark);
-  color: var(--light);
+  background: var(--light);
+  color: var(--dark);
   font-family: 'Poiret One', cursive;
 
 }
-
+  
 h1,
 h2,
 h3,
@@ -293,3 +293,7 @@ a {
 .navActive {
   color: var(--secondary);
 }
+
+#navbar {
+  background-color: var(--tertiary)
+};

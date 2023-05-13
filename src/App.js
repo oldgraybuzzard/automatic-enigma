@@ -8,47 +8,39 @@ function App() {
   const [services] = useState([
     {
       name: "Project Management",
-      description: "Achieve your project goals with ease and precision through Melken Solutions' proven project management approach."
+      id: "#projectManagement"
     },
     {
       name: "Interactive Electronic Technical Manuals (IETM)",
-      description: "Upgrade your technical game with IETMs - interactive, intuitive, and instant access to all your technical documentation needs."
+      id: "#ietm"
     },
     {
       name: "Engineering Support",
-      description: "Experience superior performance and cost savings with Melken Solutions' training system design and maintenance."
-    },
-    {
-      name: "Field Engineering Support",
-      description: "Solving complex problems on the ground with precision and expertise."
+      id: "#engineeringSupport"
     },
     {
       name: "Integrated Logistics Support (ILS)",
-      description: "From planning to implementation, Melken Solutions' integrated logistics support has you covered."
+      id: "#ils"
     },
     {
       name: "Training Solutions",
-      description: "Maximize your training device ROI with Melken Solutions' tailored training programs."
-    },
-    {
-      name: "Data Entry",
-      description: "Maximize your productivity and streamline your operations with Melken Solutions' reliable data entry solutions."
-    },
-    {
-      name: "Information Management",
-      description: "Achieve optimal data organization and accessibility with Melken Solutions' expert information management services."
+      id: "#trainingSolutions"
     },
     {
       name: "508 Accessibility",
-      description: "Unlock your digital content's full potential with Melken Solutions' inclusive 508 Accessibility services."
+      id: "#508"
     },
     {
-      name: "Document Conversion",
-      description: "Unlock the full potential of your documents with Melken Solutions' comprehensive conversion solutions."
+      name: "Information Management",
+      id: "#informationManagement"
+    },
+    {
+      name: "Data Entry",
+      id: "#dataEntry"
     },
   ]);
 
-  const [currentService, setCurrentService] = useState(services[0]);
+  const [currentService, setCurrentService, goToService] = useState(services[0]);
 
   return (
     <div>
@@ -56,6 +48,7 @@ function App() {
         services={services}
         setCurrentService={setCurrentService}
         currentService={currentService}
+        goToService={goToService}
       ></Navigation>
       <main>
         <div>

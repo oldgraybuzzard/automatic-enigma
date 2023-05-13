@@ -11,14 +11,15 @@ function Navigation(props) {
     services = [],
     setCurrentService,
     currentService,
+    goToService,
   } = props;
 
   useEffect(() => {
     document.title = capitalizeFirstLetter(currentService.name);
-  }, [currentService]);
+  }, [currentService, goToService]);
 
   return (
-    <Navbar collapseOnSelect expand="lg" sticky="top" bg="light">
+    <Navbar id='navbar' collapseOnSelect expand="lg" sticky="top">
       <Container fluid="sm">
         <Navbar.Brand href="/"><img class="logo" src={melkenLogo} alt="Melken Brand Logo"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -26,19 +27,23 @@ function Navigation(props) {
           <Nav>
             <Nav.Link href="/">Home</Nav.Link>
             <NavDropdown title="Services">
+            
             {
               services.map((service) => (
-                <NavDropdown.Item
-                    className={`mx-1 ${ currentService.name === service.name && 'navActive' }`}
+                 <NavDropdown.Item
+                 href={service.id}   
+                 className={`mx-1 ${ currentService.name === service.name && 'navActive' }`}
                     key={service.name}>
                   <span onClick={() => {
-                    setCurrentService(service)
+                    setCurrentService(service, service.id)
+                    console.log(service.id);
                     }} 
                   >
                     {capitalizeFirstLetter(service.name)}
                     </span>
                   </NavDropdown.Item>
               ))}
+              
               </NavDropdown>
 
             <NavDropdown title="Government">
