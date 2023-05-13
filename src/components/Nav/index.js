@@ -51,7 +51,7 @@ function Navigation(props) {
               <NavDropdown.Item href="#contract-vehicles">Contract Vehicles</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="About">
-              <NavDropdown.Item href="#news-events">History</NavDropdown.Item>
+              <NavDropdown.Item href="#history">History</NavDropdown.Item>
               <NavDropdown.Item href="#news-events">News & Events</NavDropdown.Item>
               <NavDropdown.Item href="#contact">Contact</NavDropdown.Item>
             </NavDropdown>
