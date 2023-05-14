@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navigation from './components/Nav';
 import About from './components/About';
+import ContactUs from './components/Contact';
 import ServiceGallery from './components/ServicesGallery';
 import ServiceList from './components/ServiceList';
 
@@ -54,6 +55,7 @@ function App() {
         <div>
           <ServiceGallery></ServiceGallery>
           <About></About>
+          <ContactUs></ContactUs>
         </div>
       </main> 
     </div>
