@@ -165,6 +165,13 @@ textarea {
   padding: 5px;
 }
 
+hr {
+  background-color: var(--secondary);
+  height: 10px;
+  width: 80%;
+  border: var(--primary);
+}
+
 #about h1 {
   font-size: 3.5rem;
   font-weight: bold;

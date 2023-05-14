@@ -67,7 +67,7 @@ function About() {
             <Col sm={8}>
               <Row>
                 <h2>Growing With our Clients</h2>
-                <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-1">Over 14 Years of Experience</h1>
+                <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-1">A Wealth of Experience Gained Over 14 Years</h1>
                 <hr></hr>              
               </Row>
               <Row>
