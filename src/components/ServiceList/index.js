@@ -108,6 +108,7 @@ function ServiceList() {
         </Card>
         ))}
       </Row>
+      <hr />
     </div>
   )
 }

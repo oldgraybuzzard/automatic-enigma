@@ -206,6 +206,12 @@ hr {
   font-weight: bold;
 }
 
+.carousel-container {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+}
+
 .container {
   width: 100%;
   max-width: 1200px;

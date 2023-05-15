@@ -57,6 +57,7 @@ function App() {
       <main>
         <div>
           <ServiceGallery></ServiceGallery>
+          <ServiceList></ServiceList>
           <About></About>
           <PastPerformance></PastPerformance>
           <Capability></Capability>
