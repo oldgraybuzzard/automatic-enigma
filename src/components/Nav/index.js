@@ -47,7 +47,7 @@ function Navigation(props) {
               </NavDropdown>
 
             <NavDropdown title="Government">
-              <NavDropdown.Item href="#capability-statement">Capability Statement</NavDropdown.Item>
+              <NavDropdown.Item href="#capability">Capability Statement</NavDropdown.Item>
               <NavDropdown.Item href="#contract-vehicles">Contract Vehicles</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="About">

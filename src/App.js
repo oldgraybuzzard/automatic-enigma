@@ -4,6 +4,7 @@ import About from './components/About';
 import ContactForm from './components/ContactForm';
 import ServiceGallery from './components/ServicesGallery';
 import ServiceList from './components/ServiceList';
+import Capability from './components/Capability-Statement';
 import Footer from './components/Footer';
 
 function App() {
@@ -56,6 +57,7 @@ function App() {
         <div>
           <ServiceGallery></ServiceGallery>
           <About></About>
+          <Capability></Capability>
           <ContactForm></ContactForm>
           <Footer></Footer>
         </div>

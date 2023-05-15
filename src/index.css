@@ -309,6 +309,13 @@ hr {
   margin-bottom: 25px;
 }
 
+.pdf-document {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  margin: 0 auto;
+}
+
 button {
   background: var(--primary);
   border: 0;
@@ -338,6 +345,7 @@ a {
 #navbar {
   background-color: var(--tertiary)
 };
+
 
 @media only screen and (min-width: 800PX) {
   body {
