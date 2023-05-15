@@ -105,7 +105,6 @@ function ServiceList() {
         </Card>
         ))}
       </Row>
-      
     </div>
   )
 }

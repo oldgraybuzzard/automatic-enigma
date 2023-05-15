@@ -43,7 +43,7 @@ function About() {
             <Col>
               <div className="title-block">
                 <h2 className="text-end">Who Are We</h2>
-                <h1 className="text-end mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-1">Our Story</h1>
+                <h1 className="text-end mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">Our Story</h1>
                 <hr></hr>
                 <p className="mbr-text mbr-fonts-style mbr-gray mbr-pt-3 display-7">
                   Melken is a Minority, Service Disabled Veteran Owned Small Business founded in 2008. 
@@ -67,7 +67,7 @@ function About() {
             <Col sm={8}>
               <Row>
                 <h2>Growing With our Clients</h2>
-                <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-1">A Wealth of Experience Gained Over 14 Years</h1>
+                <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">A Wealth of Experience Gained Over 14 Years</h1>
                 <hr></hr>              
               </Row>
               <Row>

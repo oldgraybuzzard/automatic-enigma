@@ -4,6 +4,7 @@ import About from './components/About';
 import ContactForm from './components/ContactForm';
 import ServiceGallery from './components/ServicesGallery';
 import ServiceList from './components/ServiceList';
+import PastPerformance from './components/Past-Performance';
 import Capability from './components/Capability-Statement';
 import Footer from './components/Footer';
 
@@ -57,6 +58,7 @@ function App() {
         <div>
           <ServiceGallery></ServiceGallery>
           <About></About>
+          <PastPerformance></PastPerformance>
           <Capability></Capability>
           <ContactForm></ContactForm>
           <Footer></Footer>
