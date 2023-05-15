@@ -4,6 +4,7 @@ import About from './components/About';
 import ContactForm from './components/ContactForm';
 import ServiceGallery from './components/ServicesGallery';
 import ServiceList from './components/ServiceList';
+import Footer from './components/Footer';
 
 function App() {
   const [services] = useState([
@@ -56,6 +57,7 @@ function App() {
           <ServiceGallery></ServiceGallery>
           <About></About>
           <ContactForm></ContactForm>
+          <Footer></Footer>
         </div>
       </main> 
     </div>
