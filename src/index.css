@@ -168,7 +168,7 @@ textarea {
 hr {
   background-color: var(--secondary);
   height: 10px;
-  width: 80%;
+  width: 100%;
   border: var(--primary);
 }
 
@@ -207,7 +207,7 @@ hr {
 }
 
 .container {
-  width: 85%;
+  width: 100%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;

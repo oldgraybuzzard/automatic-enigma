@@ -12,7 +12,7 @@ function Footer() {
 
   return (
     
-    <Container className="footer">
+    <section className="footer">
       <Row>
         <Col>
           <span className="mb-3 mb-md-0 text-body-secondary">&copy; {currentYear}</span>
@@ -35,7 +35,7 @@ function Footer() {
           </ul>
         </Col>
       </Row>
-    </Container>
+    </section>
     
   );
 }

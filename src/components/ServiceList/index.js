@@ -76,8 +76,11 @@ function ServiceList() {
   const servicePhotos = serviceLine.filter;
 
   return (
+    
     <div>
-      <Row xs={1} md={2} className="g-4">
+      <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">What we do</h1>
+      <hr />
+      <Row xs={1} md={2} className="service g-4">
 
       {serviceLine.map((service, i) => (
         <Card id={service.id} text={'dark'} style={{ width: '25rem' }}>

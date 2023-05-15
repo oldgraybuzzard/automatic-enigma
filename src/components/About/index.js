@@ -60,7 +60,6 @@ function About() {
           </Row>
         </Container>
       </section>
-      <hr></hr>
       <section className="my-5">
         <Container fluid className="my-5">
            <Row>

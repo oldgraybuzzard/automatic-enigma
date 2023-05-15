@@ -25,38 +25,38 @@ function JobToggle({ children, eventKey }) {
 function PastPerformance() {
   const [jobs] = useState([
     {
-      name: "",
-      client: "",
+      name: "Littoral Combat Ship, Mission Bay Trainer",
+      client: "Cubic Defense, Naval Air Warfare Center Training Systems Division",
       description: "",
     },
     {
-      name: "",
-      client: "",
+      name: "PowerPoint Conversion",
+      client: "Occupational Safety and Health Administration",
+      description: "508 Accessibility Conversion",
+    },
+    {
+      name: "Medical Record Data Entry",
+      client: "U.S. Veterans Administration",
       description: "",
     },
     {
-      name: "",
-      client: "",
+      name: "Document Conversion",
+      client: "U.S. Department of Justice",
       description: "",
     },
     {
-      name: "",
-      client: "",
+      name: "Document Conversion",
+      client: "National Oceanic and Atmospheric Administration",
       description: "",
     },
     {
-      name: "",
-      client: "",
+      name: "Document Conversion",
+      client: "Mid-Atlantic Regional Maintenance Center",
       description: "",
     },
     {
-      name: "",
-      client: "",
-      description: "",
-    },
-    {
-      name: "",
-      client: "",
+      name: "Transit Protection Training System",
+      client: "Cubic Defense, Naval Air Warfare Center Training Systems Division",
       description: "",
     },
     {
@@ -69,37 +69,36 @@ function PastPerformance() {
   const jobsList = jobs.filter;
 
   return (
-    <Container>
+    <section className="my-5">
       <hr />
-      <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">Past Performance</h1>
+      <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">Proven Capabilities</h1>
       <div>
-      <Row xs={1} md={2} className="g-4">
-
-      {jobs.map((jobs, i) => (
-        <Card text={'dark'} style={{ width: '25rem' }}>
-          <Card.Body>
-            <Card.Title
-              className="text-uppercase fw-bold text-decoration-underline" >
-                {jobs.name}
-            </Card.Title>
-            <Card.Text className="mb-2 text-muted">
-              {jobs.description}
-              <Accordion flush>
-                <Accordion.Item eventKey="0">
-                  <JobToggle eventKey="0">Learn More</JobToggle>
-                  <Accordion.Body>
-                    {jobs.description}
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </Card.Text>
-          </Card.Body>
-        </Card>
-        ))}
-      </Row>
-    </div>
-
-    </Container>
+        <Row xs={1} md={2} className="g-4">
+          {jobs.map((jobs, i) => (
+          <Card text={'dark'} style={{ width: '25rem' }}>
+            <Card.Body>
+              <Card.Title
+                className="text-uppercase fw-bold text-decoration-underline" >
+                  {jobs.name}
+              </Card.Title>
+              <Card.Text 
+                className="text-uppercase" >
+                  {jobs.client}
+              </Card.Text>
+                <Accordion flush>
+                  <Accordion.Item eventKey="0">
+                    <JobToggle eventKey="0">Read More</JobToggle>
+                    <Accordion.Body>
+                      {jobs.description}
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Card.Body>
+          </Card>
+          ))}
+        </Row>
+     </div>
+    </section>
   );
 }
 
