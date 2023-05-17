@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from "react-bootstrap/CardGroup";
 import Image from 'react-bootstrap/Image';
 import Container from 'react-bootstrap/Container';
-import Carousel from "react-bootstrap/Carousel";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import aboutImage from "../../assets/images/colleagues1.jpg";
