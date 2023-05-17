@@ -72,7 +72,7 @@ function ServiceList() {
     },
   ]);
 
-  const servicePhotos = serviceLine.filter;
+  // const servicePhotos = serviceLine.filter;
 
   return (
     

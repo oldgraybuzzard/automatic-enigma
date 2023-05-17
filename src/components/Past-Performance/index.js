@@ -64,7 +64,7 @@ function PastPerformance() {
     },
   ]);
 
-  const jobsList = jobs.filter;
+  // const jobsList = jobs.filter;
 
   return (
     <section className="my-5">

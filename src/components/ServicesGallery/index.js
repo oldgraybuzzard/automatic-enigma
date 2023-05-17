@@ -25,7 +25,7 @@ function ServiceGallery(currentService) {
       </div>
       <div className="carousel-inner">
         <div className="carousel-item active">
-           <img className="carousel-image" src={hero1}/>
+           <img className="carousel-image" src={hero1} alt="slide 1, Problem/Solutions image"/>
             <div className="container">
               <div className="carousel-caption text-start">
                 <div className="carousel-text">
@@ -36,7 +36,7 @@ function ServiceGallery(currentService) {
             </div>
         </div>
         <div className="carousel-item">
-          <img className="carousel-image" src={hero2}/>
+          <img className="carousel-image" src={hero2} alt="slide 2, Littorial Combat Ship"/>
           <div className="container">
             <div className="carousel-caption">
               <h1>Assisting our clients with State-of-the-Art Solutions</h1>
@@ -45,7 +45,7 @@ function ServiceGallery(currentService) {
           </div>
         </div>
         <div className="carousel-item">
-          <img className="carousel-image" src={hero3}/>
+          <img className="carousel-image" src={hero3} alt="slide 3, code"/>
            <div className="container">
             <div className="carousel-caption text-end">
               <h1>Unlocking Efficiency and Enhancing Accessibility with Interactive Electronic Technical Manuals (IETMs)</h1>
@@ -54,7 +54,7 @@ function ServiceGallery(currentService) {
           </div>
         </div>
         <div className="carousel-item">
-          <img className="carousel-image" src={hero4}/>
+          <img className="carousel-image" src={hero4} alt="slide 4, chess pieces"/>
            <div className="container">
             <div className="carousel-caption text-end">
               <h1>Streamline Your Projects with Expert Management.</h1>
