@@ -6,9 +6,7 @@ import { Figure } from "react-bootstrap";
 import contact from "../../assets/images/contact-us.jpg"
 
 function ContactForm() {
-
-  const siteKey = process.env.REACT_APP_SITE_KEY;
-    
+   
   const [formData, setFormData] = useState({
     name: "",
     email: "",

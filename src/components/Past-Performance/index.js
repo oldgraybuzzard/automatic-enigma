@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
-import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Accordion from 'react-bootstrap/Accordion';

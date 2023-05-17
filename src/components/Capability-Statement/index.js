@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css"

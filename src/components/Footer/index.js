@@ -1,10 +1,8 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import { FaLinkedin, FaGithub, } from "react-icons/fa";
-import { FaArrowUp } from "react-icons/fa";
 import logo from "../../assets/images/Small.png"
 
 function Footer() {

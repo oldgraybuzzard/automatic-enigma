@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { capitalizeFirstLetter } from '../../utils/helpers';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Accordion from 'react-bootstrap/Accordion';
