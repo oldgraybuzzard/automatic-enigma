@@ -7,6 +7,7 @@ import ServiceList from './components/ServiceList';
 import PastPerformance from './components/Past-Performance';
 import Capability from './components/Capability-Statement';
 import Footer from './components/Footer';
+import CookieConsent from './components/Cookie-Consent';
 
 function App() {
   const [services] = useState([
@@ -56,6 +57,7 @@ function App() {
       ></Navigation>
       <main>
         <div>
+          <CookieConsent></CookieConsent>
           <ServiceGallery></ServiceGallery>
           <ServiceList></ServiceList>
           <About></About>
