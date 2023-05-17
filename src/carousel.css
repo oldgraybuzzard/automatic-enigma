@@ -2,6 +2,20 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+:root {
+  --primary: #633594;
+  --secondary: #8B8982;
+  --tertiary: #FEC601;
+  --light: #FBFFF1;
+  --dark: #0F1108;
+  --darker: #111111;
+  --error: rgb(228, 46, 1);
+  --spacing-one: calc(1rem * 0.5);
+  --spacing-two: calc(1rem);
+  --spacing-five: calc(2.5rem);
+
+}
+
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -18,8 +32,13 @@ body {
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
-  bottom: 3rem;
+  bottom: 4rem;
   z-index: 10;
+  background-color: var(--light);
+  color: var(--dark);
+  opacity: 0.8;
+  font-weight: bold;
+  text-transform: capitalize;
 }
 
 /* Declare heights because of positioning of img element */
@@ -27,6 +46,10 @@ body {
   height: 32rem;
 }
 
+.carousel-image {
+  opacity: 0.6;
+  /* Set the desired opacity value (between 0 and 1) */
+}
 
 /* MARKETING CONTENT
 -------------------------------------------------- */

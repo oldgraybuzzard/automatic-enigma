@@ -1,6 +1,4 @@
 import React from "react";
-import { useState } from "react";
-import Figure from 'react-bootstrap/Figure';
 import Card from 'react-bootstrap/Card';
 import CardGroup from "react-bootstrap/CardGroup";
 import Image from 'react-bootstrap/Image';
