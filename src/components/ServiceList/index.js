@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
 function ServiceToggle({ children, eventKey }) {
@@ -71,28 +73,25 @@ function ServiceList() {
       detail: `At Melken Solutions, we understand that accurate and efficient data entry is essential in the healthcare industry. That's why we offer comprehensive medical data entry services to help healthcare providers streamline their operations and improve patient care. Our experienced team of data entry specialists is trained in medical terminology, coding, and regulations, ensuring that all data is entered correctly and securely. We work closely with our clients to understand their unique needs and tailor our services to provide the best possible solutions. With Melken Solutions, healthcare providers can focus on delivering quality care while we handle their data entry needs.`,
     },
   ]);
-
-  // const servicePhotos = serviceLine.filter;
-
+  
   return (
-    
     <div>
       <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">What we do</h1>
       <hr />
       <Row xs={1} md={2} className="service g-4">
 
       {serviceLine.map((service, i) => (
-        <Card id={service.id} text={'dark'} style={{ width: '25rem' }}>
+        <Card id={service.id} style={{ width: '20rem' }}>
           <Card.Img
+            variant="top"
             src={require(`../../assets/services/${i}.jpg`)}
             alt={service.name}
           />
           <Card.Body>
-            <Card.Title
-              className="text-uppercase fw-bold text-decoration-underline" >
-                {service.name}
+            <Card.Title>
+              {service.name}
             </Card.Title>
-            <Card.Text className="mb-2 text-muted">
+            <Card.Text>
               {service.description}
               <Accordion flush>
                 <Accordion.Item eventKey="0">

@@ -69,41 +69,40 @@ function About() {
               <Row>
                 <CardGroup>
                   <Card style={{ width: '18rem'}}>
+                    <Card.Body>
                     <Card.Img variant="top" src={man2} />
                     <Card.Text>
-                       <p>
                       It is our goal to provide our customers with proven, cost-effective, stress-free, solutions. We are thoroughly experienced in all aspects of helping organizations manage their information and produce documentation that helps their customers.
-                      <br></br>
-                      <br></br>
+                      </Card.Text>
+                      <Card.Text>
                       We pride ourselves on our ability to provide services that satisfy the exclusive expectations, needs, and requirements of our valued customers.
-                    </p>
                    </Card.Text>
+                   </Card.Body>
                   </Card>
                   <Card style={{ width: '18rem'}}>
+                    <Card.Body>
                     <Card.Img variant="top" src={fit} />
                     <Card.Text>
-                       <p>
                       We have developed an approach with a competitive advantage, to ensure that it is superior and cannot be easily reproduced by others. We separate ourselves from our competitors by strictly avoiding “cookie cutter” procedures and methods.
-                    </p>
                    </Card.Text>
+                   </Card.Body>
                   </Card>
                   <Card style={{ width: '18rem'}}>
+                    <Card.Body>
                     <Card.Img variant="top" src={colloboration} />
                     <Card.Text>
-                      <p>
                         We insist on developing a close relationship with our valued customers because this is essential in order to properly and completely ensure that their wants and needs are met. This is the reputation we strive to maintain and uphold.
-                      </p>    
                    </Card.Text>
+                   </Card.Body>
                   </Card>
                   <Card style={{ width: '18rem'}}>
+                    <Card.Body>
                     <Card.Img variant="top" src={best} />
                     <Card.Text>
-                    <p>
                       We strive to be the best in our field regardless of the pedigree, tenure or inclinations of our competitors.  It is also our goal to be the finest service of its kind in the eyes of our valued customers as judged not only by the quality of our service, but also by understanding, friendship, integrity and value.
-                    </p>    
                    </Card.Text>
+                   </Card.Body>
                   </Card>
-
                 </CardGroup>
               </Row>
             </Col>
