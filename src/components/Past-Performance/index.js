@@ -57,11 +57,6 @@ function PastPerformance() {
       client: "Cubic Defense, Naval Air Warfare Center Training Systems Division",
       description: "",
     },
-    {
-      name: "",
-      client: "",
-      description: "",
-    },
   ]);
 
   // const jobsList = jobs.filter;
@@ -83,15 +78,10 @@ function PastPerformance() {
                 className="text-uppercase" >
                   {jobs.client}
               </Card.Text>
-                <Accordion flush>
-                  <Accordion.Item eventKey="0">
-                    <JobToggle eventKey="0">Read More</JobToggle>
-                    <Accordion.Body>
-                      {jobs.description}
-                    </Accordion.Body>
-                  </Accordion.Item>
-                </Accordion>
-              </Card.Body>
+              <Card.Text>
+                <a href="mailto:info@melken-solutions.com?Subject=I have a question about...&body=I visited your website and I am looking at Past Performance. I would love to learn more about one of the projects listed. I would appreciate it if you could return my email.">Contact us</a>to learn more about our involvement with this effort!
+              </Card.Text>
+            </Card.Body>
           </Card>
           ))}
         </Row>
