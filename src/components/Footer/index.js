@@ -13,13 +13,17 @@ function Footer() {
     <section className="footer">
       <Row>
         <Col>
-          <span className="mb-3 mb-md-0 text-body-secondary">&copy; {currentYear}</span>
         </Col>
-        <Col>
-          <a href="/" className="mb-3 me-2 mb-md-0"><Image src={logo} /></a>
+      </Row>
+      <Row>
+        <Col className="nav justify-content-center list-unstyled d-flex">
+          &copy; {currentYear} Melken Solutions - All Rights Reserved
         </Col>
+        </Row>
+        <br/>
+        <Row>
         <Col>
-          <ul className="nav justify-content-end list-unstyled d-flex">
+          <ul className="nav justify-content-center list-unstyled d-flex">
             <li className="ms-3">
               <a className="text-body-secondary" href="https://www.linkedin.com/company/melken-solutions-llc/?viewAsMember=true">
                 <FaLinkedin />
@@ -33,6 +37,12 @@ function Footer() {
           </ul>
         </Col>
       </Row>
+     <br/>
+      <Row>
+        <Col className="text-center">
+         810 Eyrie Drive, Oviedo, FL 32765 | 407.977.5673 | <a href="#privacy" >Privacy Statement</a> | <a href="#terms">Terms of Service</a> | <a href="#returns">Returns & Refund Policy</a>
+        </Col>
+       </Row>
     </section>
     
   );

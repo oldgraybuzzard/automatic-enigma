@@ -5,6 +5,7 @@ import ContactForm from './components/ContactForm';
 import ServiceGallery from './components/ServicesGallery';
 import ServiceList from './components/ServiceList';
 import PastPerformance from './components/Past-Performance';
+import Certification from './components/Certifications';
 import Capability from './components/Capability-Statement';
 import Footer from './components/Footer';
 import CookieConsent from './components/Cookie-Consent';
@@ -62,6 +63,7 @@ function App() {
           <ServiceList></ServiceList>
           <About></About>
           <PastPerformance></PastPerformance>
+          <Certification></Certification>
           <Capability></Capability>
           <ContactForm></ContactForm>
           <Footer></Footer>

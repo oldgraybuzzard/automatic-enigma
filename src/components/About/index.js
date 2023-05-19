@@ -1,16 +1,18 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import CardGroup from "react-bootstrap/CardGroup";
+import Figure from 'react-bootstrap/Figure';
 import Image from 'react-bootstrap/Image';
+import FigureImage from 'react-bootstrap/FigureImage';
 import Container from 'react-bootstrap/Container';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import aboutImage from "../../assets/images/colleagues1.jpg";
-import compass from "../../assets/images/melken-compass.jpg";
+import aboutImage from "../../assets/images/discover.png";
+import compass from "../../assets/images/history.png";
 import man1 from "../../assets/images/man-1.png";
 import man2 from "../../assets/images/man-2.png";
 import fit from "../../assets/images/fitthepieces.jpg";
-import colloboration from "../../assets/images/people-working at table.jpg";
+import colloboration from "../../assets/images/colloboration.png";
 import best from "../../assets/images/leader.jpg";
 
 function About() {
@@ -19,15 +21,31 @@ function About() {
       <section>
         <Container id="history">
           <Row className="justify-content-md-center">
-            <Col fluid>
-              <Image src={aboutImage} alt="People sitting around a table collaborating"  roundedCircle/>
+            <Col>
+              <Figure>
+                <Figure.Image
+                width={171}
+                height={180}
+                alt="People sitting around a table collaborating"
+                src={aboutImage}
+                roundedCircle
+                />
+              </Figure>
             </Col>
-            <Col id="about" md="auto">
-              <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-1">Discover Who We Are</h1>
+            <Col xs={8}> 
+              <h1 className="text-center mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">Discover Who We Are</h1>
             </Col>
-            <Col fluid>
-              <Image src={aboutImage} alt="People sitting around a table collaborating" roundedCircle/>
-            </Col>
+            <Col>
+              <Figure>
+                <Figure.Image
+                width={171}
+                height={180}
+                alt="People sitting around a table collaborating"
+                src={aboutImage}
+                roundedCircle
+                />
+            </Figure>
+            </Col> 
           </Row>
         </Container>
       </section>
@@ -59,51 +77,49 @@ function About() {
       </section>
       <section className="my-5">
         <Container fluid className="my-5">
-           <Row>
-            <Col sm={8}>
-              <Row>
-                <h2>Growing With our Clients</h2>
-                <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">A Wealth of Experience Gained Over 14 Years</h1>
-                <hr></hr>              
-              </Row>
-              <Row>
-                <CardGroup>
-                  <Card style={{ width: '18rem'}}>
-                    <Card.Body>
-                    <Card.Img variant="top" src={man2} />
+          <Row>
+          <Col sm={8}>
+            <Row>
+              <h2>Growing With our Clients</h2>
+              <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">A Wealth of Experience Gained Over 14 Years</h1>
+              <hr/>              
+            </Row>
+            <Row>
+              <Card style={{ width: '17rem'}}>
+                  <Card.Body>
+                  <Card.Img variant="top" src={man2} />
+                  <Card.Text>
+                    It is our goal to provide our customers with proven, cost-effective, stress-free, solutions. We are thoroughly experienced in all aspects of helping organizations manage their information and produce documentation that helps their customers.
+                    </Card.Text>
                     <Card.Text>
-                      It is our goal to provide our customers with proven, cost-effective, stress-free, solutions. We are thoroughly experienced in all aspects of helping organizations manage their information and produce documentation that helps their customers.
-                      </Card.Text>
-                      <Card.Text>
-                      We pride ourselves on our ability to provide services that satisfy the exclusive expectations, needs, and requirements of our valued customers.
-                   </Card.Text>
-                   </Card.Body>
-                  </Card>
-                  <Card style={{ width: '18rem'}}>
-                    <Card.Body>
-                    <Card.Img variant="top" src={fit} />
-                    <Card.Text>
-                      We have developed an approach with a competitive advantage, to ensure that it is superior and cannot be easily reproduced by others. We separate ourselves from our competitors by strictly avoiding “cookie cutter” procedures and methods.
-                   </Card.Text>
-                   </Card.Body>
-                  </Card>
-                  <Card style={{ width: '18rem'}}>
-                    <Card.Body>
-                    <Card.Img variant="top" src={colloboration} />
-                    <Card.Text>
-                        We insist on developing a close relationship with our valued customers because this is essential in order to properly and completely ensure that their wants and needs are met. This is the reputation we strive to maintain and uphold.
-                   </Card.Text>
-                   </Card.Body>
-                  </Card>
-                  <Card style={{ width: '18rem'}}>
-                    <Card.Body>
-                    <Card.Img variant="top" src={best} />
-                    <Card.Text>
-                      We strive to be the best in our field regardless of the pedigree, tenure or inclinations of our competitors.  It is also our goal to be the finest service of its kind in the eyes of our valued customers as judged not only by the quality of our service, but also by understanding, friendship, integrity and value.
-                   </Card.Text>
-                   </Card.Body>
-                  </Card>
-                </CardGroup>
+                    We pride ourselves on our ability to provide services that satisfy the exclusive expectations, needs, and requirements of our valued customers.
+                  </Card.Text>
+                  </Card.Body>
+                </Card>
+                <Card style={{ width: '17rem'}}>
+                  <Card.Body>
+                  <Card.Img variant="top" src={fit} />
+                  <Card.Text>
+                    We have developed an approach with a competitive advantage, to ensure that it is superior and cannot be easily reproduced by others. We separate ourselves from our competitors by strictly avoiding “cookie cutter” procedures and methods.
+                  </Card.Text>
+                  </Card.Body>
+                </Card>
+                <Card style={{ width: '17rem'}}>
+                  <Card.Body>
+                  <Card.Img variant="top" src={colloboration} />
+                  <Card.Text>
+                      We insist on developing a close relationship with our valued customers because this is essential in order to properly and completely ensure that their wants and needs are met. This is the reputation we strive to maintain and uphold.
+                  </Card.Text>
+                  </Card.Body>
+                </Card>
+                <Card style={{ width: '17rem'}}>
+                  <Card.Body>
+                  <Card.Img variant="top" src={best} />
+                  <Card.Text>
+                    We strive to be the best in our field regardless of the pedigree, tenure or inclinations of our competitors.  It is also our goal to be the finest service of its kind in the eyes of our valued customers as judged not only by the quality of our service, but also by understanding, friendship, integrity and value.
+                  </Card.Text>
+                  </Card.Body>
+                </Card>
               </Row>
             </Col>
             <Col sm={4}>

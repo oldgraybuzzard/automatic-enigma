@@ -172,7 +172,7 @@ hr {
 
 /* Footer CSS*/
 .footer {
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   color: var(--dark);
   padding: 0.5rem 0;
 }
@@ -192,12 +192,6 @@ hr {
   font-size: 1.5rem;
   margin: 0 1rem;
 }
-
-.footer .footer-contact p {
-    font-size: 0.9rem;
-    margin-top: 0;
-}
-/* End Footer */
 
 #about h1 {
   font-size: 3.5rem;
@@ -389,7 +383,7 @@ a {
 
 @media only screen and (min-width: 800PX) {
   body {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   main {
@@ -400,7 +394,7 @@ a {
 }
 @media only screen and (min-width: 900PX) {
   body {
-    font-size: 8px;
+    font-size: 16px;
   }
 
   main {
@@ -409,4 +403,12 @@ a {
     padding: 10px 10px;
   }
   
+}
+
+@media only screen and (max-width: 400PX) {
+.react-pdf__Page__canvas {
+    margin: 0 auto;
+    width: 80% !important;
+    height: 100% !important;
+  }
 }
