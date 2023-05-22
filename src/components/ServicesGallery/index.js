@@ -9,9 +9,8 @@ import hero2 from '../../assets/images/hero2.jpg';
 import hero3 from '../../assets/images/hero3.jpg';
 import hero4 from '../../assets/images/hero4.jpg';
 
-function ServiceGallery(currentService) {
-  const { name, description } = currentService;
-
+function ServiceGallery() {
+  // const { name, description } = currentService;
 
   return (
     <section className="hero">

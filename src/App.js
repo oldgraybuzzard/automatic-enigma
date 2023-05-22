@@ -50,7 +50,12 @@ function App() {
     },
   ]);
 
-  const [currentService, setCurrentService, goToService] = useState(services[0]);
+  const [
+    currentService, 
+    setCurrentService, 
+    goToService
+  ] 
+  = useState(services[0]);
 
   const [showPrivacy, setShowPrivacy] = useState(true);
 

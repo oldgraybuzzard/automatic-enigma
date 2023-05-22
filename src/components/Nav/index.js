@@ -14,9 +14,12 @@ function Navigation(props) {
     goToService,
   } = props;
 
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentService.name);
-  }, [currentService, goToService]);
+  // useEffect(() => {
+  //   document.title = capitalizeFirstLetter(currentService.name);
+  // }, [
+  //   currentService, 
+  //   goToService
+  // ]);
 
   return (
     <Navbar id='navbar' collapseOnSelect expand="lg" sticky="top">
@@ -36,7 +39,6 @@ function Navigation(props) {
                     key={service.name}>
                   <span onClick={() => {
                     setCurrentService(service, service.id)
-                    console.log(service.id);
                     }} 
                   >
                     {capitalizeFirstLetter(service.name)}
