@@ -1,24 +1,22 @@
 import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
-import Accordion from 'react-bootstrap/Accordion';
-import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
-function JobToggle({ children, eventKey }) {
-  const decoratedOnClick = useAccordionButton(eventKey, () =>
-    console.log('service list'),
-  );
+// function JobToggle({ children, eventKey }) {
+//   const decoratedOnClick = useAccordionButton(eventKey, () =>
+//     console.log('service list'),
+//   );
 
-  return (
-    <button
-      type='button'
-      style={{ backgroundColor: '#6D214F'}}
-      onClick={decoratedOnClick}
-      >
-        {children}
-      </button>
-  );
-}
+//   return (
+//     <button
+//       type='button'
+//       style={{ backgroundColor: '#6D214F'}}
+//       onClick={decoratedOnClick}
+//       >
+//         {children}
+//       </button>
+//   );
+// }
 
 function PastPerformance() {
   const [jobs] = useState([
@@ -79,7 +77,7 @@ function PastPerformance() {
                   {jobs.client}
               </Card.Text>
               <Card.Text>
-                <a href="mailto:info@melken-solutions.com?Subject=I have a question about...&body=I visited your website and I am looking at Past Performance. I would love to learn more about one of the projects listed. I would appreciate it if you could return my email.">Contact us</a>to learn more about our involvement with this effort!
+                <a href="mailto:info@melken-solutions.com?Subject=I have a question about...&body=I visited your website and I am looking at Past Performance. I would love to learn more about one of the projects listed. I would appreciate it if you could return my email.">Contact us</a> to learn more about involvement with this effort!
               </Card.Text>
             </Card.Body>
           </Card>

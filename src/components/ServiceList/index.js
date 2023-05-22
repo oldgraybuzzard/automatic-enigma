@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Accordion from 'react-bootstrap/Accordion';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 
 function ServiceToggle({ children, eventKey }) {
