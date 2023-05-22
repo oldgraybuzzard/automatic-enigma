@@ -386,20 +386,36 @@ a {
   color: var(--darker);
 }
 
-#privacy-statement {
+/* #privacy-statement, #terms-of-service, #returns-refund-policy {
   padding-left: 20px;
   font-size: 12px;
 }
 
-#privacy-statement h3 {
+#privacy-statement,
+#terms-of-service,
+#returns-refund-policy 
+h1,
+h2,
+h3 {
   font-size: 14px;
   font-weight: bold;
 }
 
-#privacy-statement p, ul, li {
+#privacy-statement,
+#terms-of-service,
+#returns-refund-policy h1,
+h2,
+h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#privacy-statement,
+#terms-of-service,
+#returns-refund-policy p, ul, li {
   font-size: 12px;
   font-weight: 700;
-}
+} */
 
 @media only screen and (min-width: 800PX) {
   body {

@@ -11,8 +11,8 @@ import Capability from './components/Capability-Statement';
 import Footer from './components/Footer';
 import CookieConsent from './components/Cookie-Consent';
 import PrivacyStatement from './components/PrivacyStatement';
-// import TermsOfService from './components/TermsOfService';
-// import ReturnsRefundPolicy from './components/ReturnsRefundPolicy';
+import TermsOfService from './components/TermsOfService';
+import ReturnsRefundPolicy from './components/ReturnsRefundPolicy';
 
 function App() {
   const [services] = useState([
@@ -56,7 +56,6 @@ function App() {
 
   const handleClosePrivacy = () => {
     setShowPrivacy(false);
-        
   };
 
   return (
@@ -70,6 +69,8 @@ function App() {
         />
         <Routes>
             <Route path="/privacy" element={showPrivacy && <PrivacyStatement onClose={handleClosePrivacy}/>} />
+            <Route path="/terms" element={showPrivacy && <TermsOfService onClose={handleClosePrivacy}/>} />
+            <Route path="/returns" element={showPrivacy && <ReturnsRefundPolicy onClose={handleClosePrivacy}/>} />
             {/* Define more routes as needed */}
         </Routes>
         <main>

@@ -59,6 +59,7 @@ function PrivacyStatement({ onClose }) {
         Email: <a href="mailto:info@melken-solutions.com">Email Us</a>
       </p>
       <button onClick={onClose}>Close</button>
+      <hr />
     </div>
   )
 };

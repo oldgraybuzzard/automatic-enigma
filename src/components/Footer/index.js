@@ -37,7 +37,7 @@ function Footer() {
       <br />
       <Row>
         <Col className="text-center">
-          810 Eyrie Drive, Oviedo, FL 32765 | 407.977.5673 | <Link to="/privacy" target="_blank" rel="noopener noreferrer">Privacy Statement</Link> | <Link to="/terms">Terms of Service</Link> | <Link to="/returns">Returns & Refund Policy</Link>
+          810 Eyrie Drive, Oviedo, FL 32765 | 407.977.5673 | <Link to="/privacy" target="_blank" rel="noopener noreferrer">Privacy Statement</Link> | <Link to="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</Link> | <Link to="/returns" target="_blank" rel="noopener noreferrer">Returns & Refund Policy</Link>
         </Col>
       </Row>
     </section>
