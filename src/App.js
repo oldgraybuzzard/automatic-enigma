@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navigation from './components/Nav';
 import About from './components/About';
 import ContactForm from './components/ContactForm';
@@ -9,6 +10,9 @@ import Certification from './components/Certifications';
 import Capability from './components/Capability-Statement';
 import Footer from './components/Footer';
 import CookieConsent from './components/Cookie-Consent';
+import PrivacyStatement from './components/PrivacyStatement';
+// import TermsOfService from './components/TermsOfService';
+// import ReturnsRefundPolicy from './components/ReturnsRefundPolicy';
 
 function App() {
   const [services] = useState([
@@ -48,28 +52,41 @@ function App() {
 
   const [currentService, setCurrentService, goToService] = useState(services[0]);
 
+  const [showPrivacy, setShowPrivacy] = useState(true);
+
+  const handleClosePrivacy = () => {
+    setShowPrivacy(false);
+        
+  };
+
   return (
-    <div>
-      <Navigation
-        services={services}
-        setCurrentService={setCurrentService}
-        currentService={currentService}
-        goToService={goToService}
-      ></Navigation>
-      <main>
-        <div>
-          <CookieConsent></CookieConsent>
-          <ServiceGallery></ServiceGallery>
-          <ServiceList></ServiceList>
-          <About></About>
-          <PastPerformance></PastPerformance>
-          <Certification></Certification>
-          <Capability></Capability>
-          <ContactForm></ContactForm>
-          <Footer></Footer>
-        </div>
-      </main> 
-    </div>
+    <Router>
+      <div>
+        <Navigation
+          services={services}
+          setCurrentService={setCurrentService}
+          currentService={currentService}
+          goToService={goToService}
+        />
+        <Routes>
+            <Route path="/privacy" element={showPrivacy && <PrivacyStatement onClose={handleClosePrivacy}/>} />
+            {/* Define more routes as needed */}
+        </Routes>
+        <main>
+          <div>
+            <CookieConsent />
+            <ServiceGallery />
+            <ServiceList />
+            <About />
+            <PastPerformance />
+            <Certification />
+            <Capability />
+            <ContactForm />
+            <Footer />
+          </div>
+        </main>
+      </div>
+    </Router>
   );
 }
 

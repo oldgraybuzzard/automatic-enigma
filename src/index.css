@@ -172,7 +172,7 @@ hr {
 
 /* Footer CSS*/
 .footer {
-  background-color: var(--secondary);
+  background-color: lightgrey;
   color: var(--dark);
   padding: 0.5rem 0;
 }
@@ -196,6 +196,11 @@ hr {
 #about h1 {
   font-size: 3.5rem;
   font-weight: bold;
+}
+
+#about-image {
+  padding-top: 150px;
+  padding-right: 20px;
 }
 
 .carousel-container {
@@ -376,9 +381,24 @@ a {
 }
 
 #navbar {
-  background-color: #FFFFFF;
+  background-color: lightgrey;
   font-size: 20px;
   color: var(--darker);
+}
+
+#privacy-statement {
+  padding-left: 20px;
+  font-size: 12px;
+}
+
+#privacy-statement h3 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#privacy-statement p, ul, li {
+  font-size: 12px;
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 800PX) {

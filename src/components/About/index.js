@@ -51,7 +51,7 @@ function About() {
         <Container>
           <Row>
             <Col>
-              <Image src={compass} rounded />
+              <Image id="about-image" src={compass} rounded />
             </Col>
             <Col>
               <div className="title-block">

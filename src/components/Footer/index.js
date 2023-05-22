@@ -1,27 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-// import Image from "react-bootstrap/Image";
-import { FaLinkedin, FaGithub, } from "react-icons/fa";
-// import logo from "../../assets/images/Small.png"
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    
     <section className="footer">
       <Row>
-        <Col>
-        </Col>
+        <Col></Col>
       </Row>
       <Row>
         <Col className="nav justify-content-center list-unstyled d-flex">
           &copy; {currentYear} Melken Solutions - All Rights Reserved
         </Col>
-        </Row>
-        <br/>
-        <Row>
+      </Row>
+      <br />
+      <Row>
         <Col>
           <ul className="nav justify-content-center list-unstyled d-flex">
             <li className="ms-3">
@@ -37,14 +34,13 @@ function Footer() {
           </ul>
         </Col>
       </Row>
-     <br/>
+      <br />
       <Row>
         <Col className="text-center">
-         810 Eyrie Drive, Oviedo, FL 32765 | 407.977.5673 | <a href="#privacy" >Privacy Statement</a> | <a href="#terms">Terms of Service</a> | <a href="#returns">Returns & Refund Policy</a>
+          810 Eyrie Drive, Oviedo, FL 32765 | 407.977.5673 | <Link to="/privacy" target="_blank" rel="noopener noreferrer">Privacy Statement</Link> | <Link to="/terms">Terms of Service</Link> | <Link to="/returns">Returns & Refund Policy</Link>
         </Col>
-       </Row>
+      </Row>
     </section>
-    
   );
 }
 
