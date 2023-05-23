@@ -61,8 +61,8 @@ function PastPerformance() {
 
   return (
     <section className="my-5">
+      <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">Proven Capabilities</h1>
       <hr />
-      <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">Proven Capabilities</h1>
       <div>
         <Row xs={1} md={2} className="g-4">
           {jobs.map((jobs, i) => (

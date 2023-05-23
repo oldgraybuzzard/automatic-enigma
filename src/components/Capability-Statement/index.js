@@ -22,7 +22,7 @@ function Capability() {
       <Row>
         <Col>
           <div id="capability">
-            <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">Capability Statement</h1>
+            <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">Capability Statement</h1>
             <hr/>
               <Document file={capabilitypdf} onLoadSuccess={onDocumentLoadSuccess} className="pdf-document">
                 <Page pageNumber={pageNumber} renderTextLayer={false} />

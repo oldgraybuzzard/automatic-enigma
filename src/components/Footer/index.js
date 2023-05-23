@@ -22,12 +22,24 @@ function Footer() {
         <Col>
           <ul className="nav justify-content-center list-unstyled d-flex">
             <li className="ms-3">
-              <a className="text-body-secondary" href="https://www.linkedin.com/company/melken-solutions-llc/?viewAsMember=true">
+              <a
+                className="text-body-secondary"
+                href="https://www.linkedin.com/company/melken-solutions-llc/?viewAsMember=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
                 <FaLinkedin />
               </a>
             </li>
             <li className="ms-3">
-              <a className="text-body-secondary" href="https://github.com/orgs/Melken-Solutions">
+              <a
+                className="text-body-secondary"
+                href="https://github.com/orgs/Melken-Solutions"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+              >
                 <FaGithub />
               </a>
             </li>
@@ -37,7 +49,21 @@ function Footer() {
       <br />
       <Row>
         <Col className="text-center">
-          810 Eyrie Drive, Oviedo, FL 32765 | 407.977.5673 | <Link to="/privacy" target="_blank" rel="noopener noreferrer">Privacy Statement</Link> | <Link to="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</Link> | <Link to="/returns" target="_blank" rel="noopener noreferrer">Returns & Refund Policy</Link>
+          <p>
+            Melken Solutions, 810 Eyrie Drive, Oviedo, FL 32765 <br />
+            Phone: 407.977.5673 <br />
+            <Link to="/privacy" target="_blank" rel="noopener noreferrer">
+              Privacy Statement
+            </Link>{" "}
+            |{" "}
+            <Link to="/terms" target="_blank" rel="noopener noreferrer">
+              Terms of Service
+            </Link>{" "}
+            |{" "}
+            <Link to="/returns" target="_blank" rel="noopener noreferrer">
+              Returns & Refund Policy
+            </Link>
+          </p>
         </Col>
       </Row>
     </section>

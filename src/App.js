@@ -4,6 +4,7 @@ import Navigation from './components/Nav';
 import About from './components/About';
 import ContactForm from './components/ContactForm';
 import ServiceGallery from './components/ServicesGallery';
+import WhyUs from './components/WhyUs';
 import ServiceList from './components/ServiceList';
 import PastPerformance from './components/Past-Performance';
 import Certification from './components/Certifications';
@@ -82,6 +83,7 @@ function App() {
           <div>
             <CookieConsent />
             <ServiceGallery />
+            <WhyUs></WhyUs>
             <ServiceList />
             <About />
             <PastPerformance />

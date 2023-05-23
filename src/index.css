@@ -251,6 +251,15 @@ hr {
   justify-content: flex-end;
 }
 
+.popover-button {
+  background-color: #8854d0;
+  /* Add any other custom styles you want */
+}
+
+.whyus-popover {
+  background-color: #fffa65;
+}
+
 .mx-1 {
   margin-right: var(--spacing-one);
   margin-left: var(--spacing-one);
@@ -311,6 +320,10 @@ hr {
 
 .accordion-body {
   text-align: left;
+}
+
+.accordion-header {
+  height: 40px;
 }
 
 
@@ -385,6 +398,7 @@ a {
   font-size: 20px;
   color: var(--darker);
 }
+
 
 /* #privacy-statement, #terms-of-service, #returns-refund-policy {
   padding-left: 20px;
