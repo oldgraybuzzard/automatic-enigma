@@ -32,6 +32,7 @@ function About() {
             </Col>
             <Col xs={8}> 
               <h1 className="text-center mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-3">Discover Who We Are</h1>
+              <hr />
             </Col>
             <Col>
               <Figure>
