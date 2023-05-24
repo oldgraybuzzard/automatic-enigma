@@ -5,6 +5,8 @@ const CookieConsent = () => {
 
   const handleAccept = () => {
     setAccepted(true);
+    localStorage.setItem('cookieConsent', 'accepted');
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -14,12 +16,6 @@ const CookieConsent = () => {
     }
   }, []);
 
-  useEffect(() => {
-    if (accepted) {
-      localStorage.setItem('cookieConsent', 'accepted');
-    }
-  }, [accepted]);
-
   if (accepted) {
     return null;
   }
@@ -28,9 +24,14 @@ const CookieConsent = () => {
     <div className="cookie-consent-overlay">
       <div className="cookie-consent">
         <p>
-          We use cookies to analyze performance of the traffic on our website and provide content personalization. By clicking "I Accept," you consent to use of cookies in accordance with our Privacy Statement.
+          We use cookies to analyze the performance of traffic on our website and provide content personalization. By clicking "I Accept," you consent to the use of cookies.{" "}
+          <a href="/privacy" target="_blank" rel="noopener noreferrer">
+            Learn more
+          </a>{" "}
+          about how we use cookies in our Privacy Statement.
         </p>
         <button onClick={handleAccept}>I Accept</button>
+        <button onClick={() => setAccepted(true)}>Dismiss</button>
       </div>
     </div>
   );

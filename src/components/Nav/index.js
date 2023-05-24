@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -11,20 +11,12 @@ function Navigation(props) {
     services = [],
     setCurrentService,
     currentService,
-    goToService,
   } = props;
-
-  // useEffect(() => {
-  //   document.title = capitalizeFirstLetter(currentService.name);
-  // }, [
-  //   currentService, 
-  //   goToService
-  // ]);
 
   return (
     <Navbar id='navbar' collapseOnSelect expand="lg" sticky="top">
       <Container fluid="sm">
-        <Navbar.Brand href="/"><img class="logo" src={melkenLogo} alt="Melken Brand Logo"></img></Navbar.Brand>
+        <Navbar.Brand href="/"><img className="logo" src={melkenLogo} alt="Melken Brand Logo"></img></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           <Nav>

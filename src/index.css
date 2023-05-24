@@ -253,7 +253,8 @@ hr {
 
 .popover-button {
   background-color: #8854d0;
-  /* Add any other custom styles you want */
+  color: white;
+  font-weight: bold;
 }
 
 .whyus-popover {
