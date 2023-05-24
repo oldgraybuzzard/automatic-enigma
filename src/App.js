@@ -85,10 +85,10 @@ function App() {
             <ServiceGallery />
             <WhyUs></WhyUs>
             <ServiceList />
-            <About />
             <PastPerformance />
             <Certification />
             <Capability />
+            <About />
             <ContactForm />
             <Footer />
           </div>
