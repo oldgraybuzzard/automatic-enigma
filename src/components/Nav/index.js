@@ -4,7 +4,18 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import Button from 'react-bootstrap/Button';
 import melkenLogo from '../../assets/images/Small.png';
+import EmployeeArea from '../EmployeeArea';
+import* as msal from '@azure/msal-browser';
+
+const msalConfig = {
+  auth: {
+    clientId: 'ea48be00-4342-4789-9162-641dd9be4009',
+    authority: 'https://login.microsoftonline.com/281950d2-3875-419e-8017-cf5cf823f049',
+    redirectUri: window.location.origin
+  }
+};
 
 function Navigation() {
   const [services] = useState([
@@ -43,10 +54,29 @@ function Navigation() {
   ]);
 
   const [currentService, setCurrentService] = useState(services[0]);
+  const [loggedIn, setLoggedIn] = useState(false);
 
+  const handleLogin = async () => {
+   try {
+      // Login with Microsoft 365 credentials
+      const loginRequest = {
+        scopes: ['user.read', 'openid', 'profile']
+      };
+
+      const response = await msalInstance.loginPopup(loginRequest);
+      if (response && response.account) {
+        // Authentication successful
+        setLoggedIn(true);
+      }
+    } catch (error) {
+      console.log(error);
+      // Handle error
+    }
+  }
+  
   return (
     <Navbar id="navbar" collapseOnSelect expand="lg" sticky="top">
-      <Container fluid="sm">
+      <Container fluid="xxl">
         <Navbar.Brand href="/">
           <img className="logo" src={melkenLogo} alt="Melken Brand Logo" />
         </Navbar.Brand>
@@ -75,6 +105,11 @@ function Navigation() {
               <NavDropdown.Item href="#certifications">Certifications</NavDropdown.Item>
               <NavDropdown.Item href="#contactUs">Contact</NavDropdown.Item>
             </NavDropdown>
+             {loggedIn ? (
+              "Welcome Teammate!"
+            ) : (
+            <Button variant="secondary" onClick={handleLogin}>Employee Login</Button>
+             )}
           </Nav>
         </Navbar.Collapse>
       </Container>
