@@ -55,7 +55,7 @@ const WhyUs = () => {
             <OverlayTrigger key={index} trigger="click" placement="left" overlay={
               <Popover id={`popover-${index}`} className="whyus-popover">
               <Popover.Header as="h3">{item.why}</Popover.Header>
-              <Popover.Body>{item.reason}</Popover.Body>
+              <Popover.Body id="popover-body">{item.reason}</Popover.Body>
             </Popover>}>
               <div className="d-grid gap-2">
                 <Button className="popover-button" variant="warning" size="lg">{item.why}</Button>

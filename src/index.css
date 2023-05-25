@@ -257,6 +257,10 @@ hr {
   font-weight: bold;
 }
 
+#popover-body {
+  font-size: large;
+}
+
 .whyus-popover {
   background-color: #fffa65;
 }
