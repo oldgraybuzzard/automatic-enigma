@@ -8,7 +8,7 @@ import hero2 from '../../assets/images/hero2.jpg';
 import hero3 from '../../assets/images/hero3.jpg';
 import hero4 from '../../assets/images/hero4.jpg';
 
-function ServiceGallery() {
+function Home() {
   return (
     <section className="hero">
       <Row>
@@ -68,4 +68,4 @@ function ServiceGallery() {
   );
 }
 
-export default ServiceGallery;
+export default Home;
