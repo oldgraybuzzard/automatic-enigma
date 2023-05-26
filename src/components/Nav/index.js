@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -79,13 +80,13 @@ function Navigation() {
   return (
     <Navbar id="navbar" collapseOnSelect expand="lg" sticky="top">
       <Container fluid="xxl">
-        <Navbar.Brand href="/">
+        <Navbar.Brand as={Link} to="/">
           <img className="logo" src={melkenLogo} alt="Melken Brand Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse className="justify-content-end">
           <Nav>
-            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link as={Link} to="/">Home</Nav.Link>
             <NavDropdown title="Services">
               {services.map((service) => (
                 <NavDropdown.Item
@@ -108,10 +109,10 @@ function Navigation() {
               <NavDropdown.Item href="#contactUs">Contact</NavDropdown.Item>
             </NavDropdown>
              {loggedIn ? (
-              "Welcome Teammate!"
+              <Nav.Link as={Link} to="/employee">Employee Page</Nav.Link>
             ) : (
-            <Button variant="secondary" onClick={handleLogin}>Employee Login</Button>
-             )}
+              <Button variant="secondary" onClick={handleLogin}>Employee Login</Button>
+            )}
           </Nav>
         </Navbar.Collapse>
       </Container>

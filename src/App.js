@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Navigation from './components/Nav';
@@ -15,6 +16,7 @@ import CookieConsent from './components/Cookie-Consent';
 import PrivacyStatement from './components/PrivacyStatement';
 import TermsOfService from './components/TermsOfService';
 import ReturnsRefundPolicy from './components/ReturnsRefundPolicy';
+// import EmployeePage from './components/EmployeeArea';
 
 function PageTitle({ location }) {
   const getPageTitle = (path) => {
@@ -60,6 +62,7 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/employee" element={<a href="/employee" target="_blank" rel="noopener noreferrer">Employee Page</a>} />
           <Route path="/#project-management" element={<ServiceList />} />
           <Route path="/privacy" element={showPrivacy && <PrivacyStatement onClose={handleClosePrivacy} />} />
           <Route path="/terms" element={showPrivacy && <TermsOfService onClose={handleClosePrivacy} />} />
@@ -86,5 +89,12 @@ function App() {
     </Router>
   );
 }
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
 
 export default App;
