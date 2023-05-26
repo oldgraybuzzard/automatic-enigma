@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -7,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import melkenLogo from '../../assets/images/Small.png';
-import EmployeeArea from '../EmployeeArea';
+// import EmployeeArea from '../EmployeeArea';
 import* as msal from '@azure/msal-browser';
 
 const msalConfig = {
@@ -76,6 +77,10 @@ function Navigation() {
       // Handle error
     }
   }
+
+  const handleEmployeePage = () => {
+    window.open('https://melkensolutions.sharepoint.com/sites/MelkenIntranet', '_blank');
+  };
   
   return (
     <Navbar id="navbar" collapseOnSelect expand="lg" sticky="top">
@@ -109,10 +114,10 @@ function Navigation() {
               <NavDropdown.Item href="#contactUs">Contact</NavDropdown.Item>
             </NavDropdown>
              {loggedIn ? (
-              <Nav.Link as={Link} to="/employee">Employee Page</Nav.Link>
-            ) : (
-              <Button variant="secondary" onClick={handleLogin}>Employee Login</Button>
-            )}
+                <Nav.Link onClick={handleEmployeePage}>Employee Page</Nav.Link>
+              ) : (
+                <Button variant="secondary" onClick={handleLogin}>Employee Login</Button>
+              )}
           </Nav>
         </Navbar.Collapse>
       </Container>

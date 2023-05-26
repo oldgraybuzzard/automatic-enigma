@@ -2,22 +2,6 @@ import React, { useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 
-// function JobToggle({ children, eventKey }) {
-//   const decoratedOnClick = useAccordionButton(eventKey, () =>
-//     console.log('service list'),
-//   );
-
-//   return (
-//     <button
-//       type='button'
-//       style={{ backgroundColor: '#6D214F'}}
-//       onClick={decoratedOnClick}
-//       >
-//         {children}
-//       </button>
-//   );
-// }
-
 function PastPerformance() {
   const [jobs] = useState([
     {
@@ -63,10 +47,9 @@ function PastPerformance() {
     <section className="my-5">
       <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">Proven Capabilities</h1>
       <hr />
-      <div>
         <Row xs={1} md={2} className="g-4">
           {jobs.map((jobs, i) => (
-          <Card text={'dark'} style={{ width: '25rem' }}>
+          <Card key={i} text={'dark'} style={{ width: '25rem' }}>
             <Card.Body>
               <Card.Title
                 className="text-uppercase fw-bold text-decoration-underline" >
@@ -83,7 +66,6 @@ function PastPerformance() {
           </Card>
           ))}
         </Row>
-     </div>
     </section>
   );
 }

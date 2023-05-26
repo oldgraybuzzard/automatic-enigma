@@ -75,38 +75,42 @@ function ServiceList() {
   
   return (
     <div>
-      {capitalizeFirstLetter}<h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">What We Do</h1>
+      <h1 className="mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">
+        What We Do
+      </h1>
       <hr />
       <Row xs={1} md={2} className="service g-4">
-
-      {serviceLine.map((service, i) => (
-        <Card id={service.id} style={{ width: '20rem' }}>
-          <Card.Img
-            variant="top"
-            src={require(`../../assets/services/${i}.jpg`)}
-            alt={service.name}
-          />
-          <Card.Body>
-            <Card.Title>
-              {service.name}
-            </Card.Title>
-            <Card.Text>
-              {service.description}
-              <Accordion flush>
-                <Accordion.Item eventKey="0">
-                  <ServiceToggle eventKey="0">Learn More</ServiceToggle>
-                  <Accordion.Body>
-                    {service.detail}
-                  </Accordion.Body>
-                </Accordion.Item>
-              </Accordion>
-            </Card.Text>
-          </Card.Body>
-        </Card>
+        {serviceLine.map((service, i) => (
+          <Card key={i} id={service.id} style={{ width: '20rem' }}>
+            <Card.Img
+              variant="top"
+              src={require(`../../assets/services/${i}.jpg`).default}
+              alt={service.name}
+            />
+            <Card.Body>
+              <Card.Title>{service.name}</Card.Title>
+              <Card.Text>
+                {service.description}
+                <Accordion flush>
+                  <Accordion.Item eventKey="0">
+                    <ServiceToggle eventKey="0">Learn More</ServiceToggle>
+                    <Accordion.Body>{service.detail}</Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
+              </Card.Text>
+            </Card.Body>
+          </Card>
         ))}
       </Row>
       <hr />
     </div>
-  )
+  );
 }
+
 export default ServiceList;
+
+
+
+
+
+

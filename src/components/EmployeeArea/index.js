@@ -1,30 +1,38 @@
 import React from "react";
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from '../Nav';
+import Footer from '../Footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-function EmployeePage() {
+const EmployeePage = () => {
   return (
-    <Container>
-      <Row>
-        <Col>
-          <h3>Welcome, Employee!</h3>
-          {/* Employee area content */}
-        </Col>
-      </Row>
-    </Container>
+    <div>
+      {/* <Navigation /> */}
+      <div className="container">
+        <h1>Employee Page</h1>
+        <div className="section">
+          <h2>Company Information</h2>
+        </div>
+        <div className="section">
+          <h2>HR</h2>
+          <div className="subsection">
+            <h3>Training</h3>
+            <p><a href="https://melken-solutions.com/training/coi/#/">COI</a></p>
+          </div>
+          <div className="subsection">
+            <h3>Policy and Procedures</h3>
+          </div>
+        </div>
+        <div className="section">
+          <h2>Quality Management System</h2>
+        </div>
+      </div>
+      {/* <Footer /> */}
+    </div>
   );
-}
-
-ReactDOM.render(
-  <Router>
-    <Routes>
-      <Route path="/employee" element={<EmployeePage />} />
-    </Routes>
-  </Router>,
-  document.getElementById('root')
-);
+};
 
 export default EmployeePage;

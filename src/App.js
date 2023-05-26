@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import { createRoot } from 'react-dom/client';
 import Navigation from './components/Nav';
 import About from './components/About';
 import ContactForm from './components/ContactForm';
@@ -16,7 +17,7 @@ import CookieConsent from './components/Cookie-Consent';
 import PrivacyStatement from './components/PrivacyStatement';
 import TermsOfService from './components/TermsOfService';
 import ReturnsRefundPolicy from './components/ReturnsRefundPolicy';
-// import EmployeePage from './components/EmployeeArea';
+import EmployeePage from './components/EmployeeArea';
 
 function PageTitle({ location }) {
   const getPageTitle = (path) => {
@@ -62,7 +63,6 @@ function App() {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/employee" element={<a href="/employee" target="_blank" rel="noopener noreferrer">Employee Page</a>} />
           <Route path="/#project-management" element={<ServiceList />} />
           <Route path="/privacy" element={showPrivacy && <PrivacyStatement onClose={handleClosePrivacy} />} />
           <Route path="/terms" element={showPrivacy && <TermsOfService onClose={handleClosePrivacy} />} />
@@ -71,6 +71,7 @@ function App() {
             path="/*"
             element={<PageTitle location={window.location} />}
           />
+          <Route path="/employee" element={<EmployeePage />} />
         </Routes>
         <main>
           <div>
@@ -90,11 +91,10 @@ function App() {
   );
 }
 
-ReactDOM.render(
+createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 export default App;
