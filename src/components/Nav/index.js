@@ -17,6 +17,8 @@ const msalConfig = {
   }
 };
 
+const msalInstance = new msal.PublicClientApplication(msalConfig);
+
 function Navigation() {
   const [services] = useState([
     {
