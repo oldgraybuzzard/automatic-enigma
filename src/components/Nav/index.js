@@ -84,8 +84,7 @@ function Navigation() {
   
   return (
     <Navbar id="navbar" collapseOnSelect expand="lg" sticky="top">
-      <Container fluid="xxl">
-        <Navbar.Brand as={Link} to="/">
+      <Navbar.Brand as={Link} to="/">
           <img className="logo" src={melkenLogo} alt="Melken Brand Logo" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -120,8 +119,7 @@ function Navigation() {
               )}
           </Nav>
         </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      </Navbar>
   );
 }
 
