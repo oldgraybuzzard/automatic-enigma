@@ -46,10 +46,10 @@ function Home() {
           alt="HTML code"
         />
 
-        <Carousel.Caption>
-          {capitalizeFirstLetter}<h3>Unlocking Efficiency and Enhancing Accessibility with Interactive Electronic Technical Manuals (IETMs)</h3>
-          {capitalizeFirstLetter}<p>Delivering Interactive and Intuitive Technical Documentation Solutions.</p>
-        </Carousel.Caption>
+      <Carousel.Caption>
+        <h3>{capitalizeFirstLetter('Unlocking Efficiency and Enhancing Accessibility with Interactive Electronic Technical Manuals (IETMs)')}</h3>
+        <p>{capitalizeFirstLetter('Delivering Interactive and Intuitive Technical Documentation Solutions.')}</p>
+      </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -58,10 +58,10 @@ function Home() {
           alt="Chessboard with pieces"
         />
 
-        <Carousel.Caption>
-          {capitalizeFirstLetter}<h3>Streamline Your Projects with Expert Management.</h3>
-          {capitalizeFirstLetter}<p>Efficiently Delivering Success, Every Step of the Way.</p>
-        </Carousel.Caption>
+      <Carousel.Caption>
+        <h3>{capitalizeFirstLetter('Streamline Your Projects with Expert Management.')}</h3>
+        <p>{capitalizeFirstLetter('Efficiently Delivering Success, Every Step of the Way.')}</p>
+      </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   </section>      

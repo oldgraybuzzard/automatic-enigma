@@ -66,7 +66,8 @@ function About() {
                   Since our beginning weve been successfully serving the U.S. Federal Government, and commercial customers, throughout the United States and its territories.
                   <br></br>
                   <br></br>
-                  Melken has provided information management solutions for multiple federal, state, and local agencies, medical offices, legal offices, Department of Defense (DoD) commercial contractors and vendors as well as various other firms from diverse industries. 
+                  <p>Melken has provided information management solutions for multiple federal, state, and local agencies, medical offices, legal offices, Department of Defense (DoD) commercial contractors and vendors as well as various other firms from diverse industries.
+                  </p> 
                   <br></br>
                 </p>
              </div>
