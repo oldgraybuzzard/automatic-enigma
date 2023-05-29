@@ -3,7 +3,6 @@ import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Accordion from 'react-bootstrap/Accordion';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
-import { capitalizeFirstLetter } from '../../utils/helpers';
 
 function ServiceToggle({ children, eventKey }) {
   const decoratedOnClick = useAccordionButton(eventKey, () =>

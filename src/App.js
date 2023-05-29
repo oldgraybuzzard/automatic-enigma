@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
+// import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { createRoot } from 'react-dom/client';
 import Navigation from './components/Nav';
@@ -17,7 +17,7 @@ import CookieConsent from './components/Cookie-Consent';
 import PrivacyStatement from './components/PrivacyStatement';
 import TermsOfService from './components/TermsOfService';
 import ReturnsRefundPolicy from './components/ReturnsRefundPolicy';
-import EmployeePage from './components/EmployeeArea';
+// import EmployeePage from './components/EmployeeArea';
 
 function PageTitle({ location }) {
   const getPageTitle = (path) => {
@@ -71,7 +71,7 @@ function App() {
             path="/*"
             element={<PageTitle location={window.location} />}
           />
-          <Route path="/employee" element={<EmployeePage />} />
+          {/* <Route path="/employee" element={<EmployeePage />} /> */}
         </Routes>
         <main>
           <div>
