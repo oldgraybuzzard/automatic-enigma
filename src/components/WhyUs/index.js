@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
@@ -37,6 +37,30 @@ const WhyUs = () => {
     },
   ];
 
+    const popoverRef = useRef (null);
+
+    useEffect(() => {
+      const centerPopover = () => {
+        const popoverNode = popoverRef.current;
+        if (popoverNode) {
+          const popoverWidth = popoverNode.offsetWidth;
+          const popoverHeight = popoverNode.offsetHeight;
+          const windowWidth = window.innerWidth;
+          const windowHeight = window.innerHeight;
+          const popoverLeft = (windowWidth - popoverWidth) /2;
+          const popoverTop = (windowHeight - popoverHeight) /2;
+          popoverNode.style.left = `${popoverLeft}px`;
+          popoverNode.style.top = `${popoverTop}px`;
+        }
+      };
+
+      window.addEventListener('resize', centerPopover);
+      centerPopover();
+      return () => {
+        window.removeEventListener('resize', centerPopover);
+      };
+    }, []);
+
   return (
     <section>
       <Row>
@@ -52,7 +76,7 @@ const WhyUs = () => {
         <Col xs lg="6">
           <p>At Melken Solutions, we pride ourselves on delivering exceptional services and providing value to our customers. Here are some reasons why you should choose us:</p>
           {whyUsList.map((item, index) => (
-            <OverlayTrigger key={index} trigger="click" placement="left" overlay={
+            <OverlayTrigger ref={popoverRef} key={index} trigger="click" placement="top" overlay={
               <Popover id={`popover-${index}`} className="whyus-popover">
               <Popover.Header as="h3">{item.why}</Popover.Header>
               <Popover.Body id="popover-body">{item.reason}</Popover.Body>
