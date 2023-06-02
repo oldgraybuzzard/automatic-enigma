@@ -77,7 +77,7 @@ function Navigation() {
   };
 
   return (
-    <Navbar id="navbar" collapseOnSelect expand="lg" sticky="top">
+    <Navbar id="navbar" collapseOnSelect expand="xl" sticky="top">
       <Navbar.Brand as={Link} to="/" className="mx-5">
         <img className="logo" src={melkenLogo} alt="Melken Brand Logo" />
       </Navbar.Brand>
@@ -106,7 +106,7 @@ function Navigation() {
             <NavDropdown.Item href="#history">History</NavDropdown.Item>
             <NavDropdown.Item href="#certifications">Certifications</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link href="#contactUs" className="mx-5">Contact Us</Nav.Link>
+          <Nav.Link href="#contactUs" className="mx-5">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse>
