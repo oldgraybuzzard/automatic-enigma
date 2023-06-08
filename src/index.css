@@ -165,9 +165,15 @@ textarea {
 }
 
 hr {
-  background-color: var(--dark);
+  background-color: var(--secondary);
   height: 8px;
   width: 100%;
+}
+
+.success hr {
+  background-color: var(--secondary);
+    height: 3x;
+    width: 100%;
 }
 
 /* Footer CSS*/
@@ -315,8 +321,17 @@ hr {
   text-align: center;
 }
 
+.success .card {
+  text-align: left;
+}
+
 .card-title {
   text-decoration: underline;
+}
+
+.success .card-title {
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .card-text {

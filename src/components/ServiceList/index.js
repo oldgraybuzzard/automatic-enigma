@@ -83,7 +83,7 @@ function ServiceList() {
           <Card key={i} id={service.id} style={{ width: '20rem' }}>
             <Card.Img
               variant="top"
-              src={require(`../../assets/services/${i}.jpg`).default}
+              src={require(`../../assets/services/${i}.jpg`)}
               alt={service.name}
             />
             <Card.Body>

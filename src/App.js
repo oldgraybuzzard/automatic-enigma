@@ -12,6 +12,7 @@ import ServiceList from './components/ServiceList';
 import PastPerformance from './components/Past-Performance';
 import Certification from './components/Certifications';
 import Capability from './components/Capability-Statement';
+import Resources from './components/Resources';
 import Footer from './components/Footer';
 import CookieConsent from './components/Cookie-Consent';
 import PrivacyStatement from './components/PrivacyStatement';
@@ -82,6 +83,7 @@ function App() {
             <Certification />
             <Capability />
             <About />
+            <Resources />
             <ContactForm />
             <Footer />
           </div>

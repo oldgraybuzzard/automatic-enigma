@@ -108,8 +108,8 @@ function Navigation() {
            
           </NavDropdown>
           <NavDropdown title="Resources" className='mx-3'>
-            <NavDropdown.Item href="" target="_blank">News</NavDropdown.Item>
-            <NavDropdown.Item href="" target="_blank">Success Stories</NavDropdown.Item>
+            <NavDropdown.Item href="#news">News</NavDropdown.Item>
+            <NavDropdown.Item href="#success">Success Cases</NavDropdown.Item>
             <NavDropdown.Item href="https://melkensolutions.wordpress.com/" target="_blank">Blog</NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="#contactUs" className="mx-3">Contact</Nav.Link>
