@@ -73,19 +73,19 @@ function Navigation() {
   };
 
   const handleEmployeePage = () => {
-    window.open('https://melkensolutions.sharepoint.com/sites/MelkenIntranet', '_blank');
+    window.open('https://melkensolutions.sharepoint.com/sites/MelkenMagnet', '_blank');
   };
 
   return (
     <Navbar id="navbar" collapseOnSelect expand="xl" sticky="top">
-      <Navbar.Brand as={Link} to="/" className="mx-5">
+      <Navbar.Brand as={Link} to="/" className="mx-3">
         <img className="logo" src={melkenLogo} alt="Melken Brand Logo" />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse>
         <Nav>
-          <Nav.Link href="/" className="mx-5">Home</Nav.Link>
-          <NavDropdown title="Services" className="mx-5">
+          <Nav.Link href="/" className="mx-3">Home</Nav.Link>
+          <NavDropdown title="Services" className="mx-3">
             {services.map((service) => (
               <NavDropdown.Item
                 href={service.id}
@@ -98,21 +98,27 @@ function Navigation() {
               </NavDropdown.Item>
             ))}
           </NavDropdown>
-          <NavDropdown title="Government" className="mx-5">
+          <NavDropdown title="Government" className="mx-3">
             <NavDropdown.Item href="#capability">Capability Statement</NavDropdown.Item>
             <NavDropdown.Item href="#contract-vehicles">Contract Vehicles</NavDropdown.Item>
           </NavDropdown>
-          <NavDropdown title="About" className="mx-5">
+          <NavDropdown title="About" className="mx-3">
             <NavDropdown.Item href="#history">History</NavDropdown.Item>
             <NavDropdown.Item href="#certifications">Certifications</NavDropdown.Item>
+           
           </NavDropdown>
-          <Nav.Link href="#contactUs" className="mx-5">Contact</Nav.Link>
+          <NavDropdown title="Resources" className='mx-3'>
+            <NavDropdown.Item href="" target="_blank">News</NavDropdown.Item>
+            <NavDropdown.Item href="" target="_blank">Success Stories</NavDropdown.Item>
+            <NavDropdown.Item href="https://melkensolutions.wordpress.com/" target="_blank">Blog</NavDropdown.Item>
+          </NavDropdown>
+          <Nav.Link href="#contactUs" className="mx-3">Contact</Nav.Link>
         </Nav>
       </Navbar.Collapse>
       <Navbar.Collapse>
         <Nav>
           {loggedIn ? (
-            <Nav.Link onClick={handleEmployeePage}>Employee Page</Nav.Link>
+            <Nav.Link onClick={handleEmployeePage}>Melken Magnet</Nav.Link>
           ) : (
             <Button variant="secondary" onClick={handleLogin}>Employee Login</Button>
           )}
