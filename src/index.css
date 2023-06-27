@@ -172,19 +172,40 @@ hr {
 
 .success hr {
   background-color: var(--secondary);
-    height: 3x;
+    height: 3px;
     width: 100%;
 }
 
 /* Footer CSS*/
 .footer {
   background-color: lightgrey;
-  color: var(--dark);
   padding: 0.5rem 0;
+}
+
+.footer hr {
+  height: 1px;
 }
 
 .footer-content {
   text-align: center;
+}
+
+.lower-footer {
+  font-size: 10px;
+}
+
+.footer-address p {
+  font-size: 12px;
+}
+
+.footer-links ul {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.footer-links p {
+  padding-top: 10px;
+  font-size: 12px;
 }
 
 .social-icons {

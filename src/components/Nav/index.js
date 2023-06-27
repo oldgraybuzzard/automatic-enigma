@@ -7,6 +7,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Button from 'react-bootstrap/Button';
 import melkenLogo from '../../assets/images/Small.png';
 import * as msal from '@azure/msal-browser';
+import JsonServiceList from "../../assets/json/services.json";
 
 const msalConfig = {
   auth: {
@@ -19,42 +20,9 @@ const msalConfig = {
 const msalInstance = new msal.PublicClientApplication(msalConfig);
 
 function Navigation() {
-  const [services] = useState([
-    {
-      name: 'Project Management',
-      id: '#project-management',
-    },
-    {
-      name: 'Interactive Electronic Technical Manuals (IETM)',
-      id: '#ietm',
-    },
-    {
-      name: 'Engineering Support',
-      id: '#engineering-support',
-    },
-    {
-      name: 'Integrated Logistics Support (ILS)',
-      id: '#ils',
-    },
-    {
-      name: 'Training Solutions',
-      id: '#training-solutions',
-    },
-    {
-      name: '508 Accessibility',
-      id: '#508',
-    },
-    {
-      name: 'Information Management',
-      id: '#information-management',
-    },
-    {
-      name: 'Data Entry',
-      id: '#data-entry',
-    },
-  ]);
-
-  const [currentService, setCurrentService] = useState(services[0]);
+  const serviceList=JsonServiceList;
+  
+  const [currentService, setCurrentService] = useState(serviceList[0]);
   const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = async () => {
@@ -86,9 +54,9 @@ function Navigation() {
         <Nav>
           <Nav.Link href="/" className="mx-3">Home</Nav.Link>
           <NavDropdown title="Services" className="mx-3">
-            {services.map((service) => (
+            {serviceList.map((service) => (
               <NavDropdown.Item
-                href={service.id}
+                href={service.link}
                 className={`mx-1 ${currentService.name === service.name ? 'navActive' : ''}`}
                 key={service.name}
                 onClick={() => setCurrentService(service)}

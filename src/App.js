@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import { createRoot } from 'react-dom/client';
 import Navigation from './components/Nav';
-import About from './components/About';
+import About from './pages/About';
 import ContactForm from './components/ContactForm';
 import Home from './components/Home';
 import WhyUs from './components/WhyUs';
@@ -19,6 +19,9 @@ import PrivacyStatement from './components/PrivacyStatement';
 import TermsOfService from './components/TermsOfService';
 import ReturnsRefundPolicy from './components/ReturnsRefundPolicy';
 // import EmployeePage from './components/EmployeeArea';
+
+import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 function PageTitle({ location }) {
   const getPageTitle = (path) => {

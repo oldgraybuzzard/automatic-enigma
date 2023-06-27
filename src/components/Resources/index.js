@@ -1,8 +1,8 @@
 import React from "react";
 import { Row, Accordion, useAccordionButton } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
-import JsonNewsList from '../../assets/news/news.json';
-import JsonSuccessStories from '../../assets/success/success.json';
+import JsonNewsList from '../../assets/json/news.json';
+import JsonSuccessStories from '../../assets/json/success.json';
 
 function NewsToggle({ children, eventKey }) {
   const decoratedOnClick = useAccordionButton(eventKey, () => {});
