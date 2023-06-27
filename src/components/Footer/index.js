@@ -60,7 +60,7 @@ function Footer() {
                 Useful Links
               </h6>
               <MDBTypography tag='small'>
-                <a href="https://melkensolutions.blog/" target="_blank" className='text-reset'>
+                <a href="https://melkensolutions.blog/" target="_blank" rel="noreferrer" className='text-reset'>
                   Blog
                 </a>
               </MDBTypography><br />

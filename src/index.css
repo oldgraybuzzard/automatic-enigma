@@ -278,20 +278,6 @@ hr {
   justify-content: flex-end;
 }
 
-.popover-button {
-  background-color: #8854d0;
-  color: white;
-  font-weight: bold;
-}
-
-#popover-body {
-  font-size: large;
-}
-
-.whyus-popover {
-  background-color: #fffa65;
-}
-
 .mx-1 {
   margin-right: var(--spacing-one);
   margin-left: var(--spacing-one);
@@ -439,38 +425,6 @@ a {
   font-size: 20px;
   color: var(--darker);
 }
-
-
-/* #privacy-statement, #terms-of-service, #returns-refund-policy {
-  padding-left: 20px;
-  font-size: 12px;
-}
-
-#privacy-statement,
-#terms-of-service,
-#returns-refund-policy 
-h1,
-h2,
-h3 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#privacy-statement,
-#terms-of-service,
-#returns-refund-policy h1,
-h2,
-h3 {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#privacy-statement,
-#terms-of-service,
-#returns-refund-policy p, ul, li {
-  font-size: 12px;
-  font-weight: 700;
-} */
 
 @media only screen and (min-width: 800PX) {
   body {

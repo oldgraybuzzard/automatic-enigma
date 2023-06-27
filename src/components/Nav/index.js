@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import { MDBBtn } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
 import melkenLogo from '../../assets/images/Small.png';
 import * as msal from '@azure/msal-browser';
 import JsonServiceList from "../../assets/json/services.json";
@@ -88,7 +88,7 @@ function Navigation() {
           {loggedIn ? (
             <Nav.Link onClick={handleEmployeePage}>Melken Magnet</Nav.Link>
           ) : (
-            <Button variant="secondary" onClick={handleLogin}>Employee Login</Button>
+            <MDBBtn rounded color='link' onClick={handleLogin}>Employee Login</MDBBtn>
           )}
         </Nav>
       </Navbar.Collapse>

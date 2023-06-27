@@ -34,8 +34,8 @@ body {
 .carousel-caption {
   bottom: 4rem;
   z-index: 10;
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--primary);
+  color: var(--darker);
   opacity: 0.8;
 }
 

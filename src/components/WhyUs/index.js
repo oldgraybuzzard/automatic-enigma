@@ -1,11 +1,9 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
+import { MDBPopover, MDBPopoverBody, MDBPopoverHeader, MDBTypography } from 'mdb-react-ui-kit';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { capitalizeFirstLetter } from "../../utils/helpers";
-import Popover from 'react-bootstrap/Popover';
 
 import collaborating from '../../assets/images/whyus-team.jpg';
 
@@ -37,30 +35,6 @@ const WhyUs = () => {
     },
   ];
 
-    const popoverRef = useRef (null);
-
-    useEffect(() => {
-      const centerPopover = () => {
-        const popoverNode = popoverRef.current;
-        if (popoverNode) {
-          const popoverWidth = popoverNode.offsetWidth;
-          const popoverHeight = popoverNode.offsetHeight;
-          const windowWidth = window.innerWidth;
-          const windowHeight = window.innerHeight;
-          const popoverLeft = (windowWidth - popoverWidth) /2;
-          const popoverTop = (windowHeight - popoverHeight) /2;
-          popoverNode.style.left = `${popoverLeft}px`;
-          popoverNode.style.top = `${popoverTop}px`;
-        }
-      };
-
-      window.addEventListener('resize', centerPopover);
-      centerPopover();
-      return () => {
-        window.removeEventListener('resize', centerPopover);
-      };
-    }, []);
-
   return (
     <section>
       <Row>
@@ -76,15 +50,32 @@ const WhyUs = () => {
         <Col xs lg="6">
           <p>At Melken Solutions, we pride ourselves on delivering exceptional services and providing value to our customers. Here are some reasons why you should choose us:</p>
           {whyUsList.map((item, index) => (
-            <OverlayTrigger ref={popoverRef} key={index} trigger="click" placement="top" overlay={
-              <Popover id={`popover-${index}`} className="whyus-popover">
-              <Popover.Header as="h3">{item.why}</Popover.Header>
-              <Popover.Body id="popover-body">{item.reason}</Popover.Body>
-            </Popover>}>
-              <div className="d-grid gap-2">
-                <Button className="popover-button" variant="warning" size="lg">{item.why}</Button>
-              </div>
-            </OverlayTrigger>
+            <MDBPopover
+              size='lg'
+              bg='#8e44ad'
+              btnChildren={item.why}
+              dismiss
+              key={index}
+              style={{ 
+                width: '800px', 
+                margin: '10px 10px', 
+                backgroundColor: '#8e44ad'
+                }}
+                popoverStyle={{
+                  backgroundColor: '#bdc3c7'
+                }}
+            >
+              <MDBPopoverHeader >
+                <MDBTypography tag='h6'>
+                  {item.why}
+                </MDBTypography>
+              </MDBPopoverHeader>
+              <MDBPopoverBody>
+                <MDBTypography tag='medium'>
+                  {item.reason}
+                </MDBTypography>
+              </MDBPopoverBody>
+            </MDBPopover>
           ))}
           <p>
             Choose Melken Solutions for reliable, high-quality, and innovative services that drive your business forward. <a href="mailto:info@melken-solutions.com">Contact us</a> today or call us at 407-977-5673 to discuss your requirements and let us help you achieve your goals.
