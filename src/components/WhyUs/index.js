@@ -57,13 +57,14 @@ const WhyUs = () => {
               dismiss
               key={index}
               style={{ 
-                width: '800px', 
+                width: '100%', 
                 margin: '10px 10px', 
                 backgroundColor: '#8e44ad'
                 }}
                 popoverStyle={{
                   backgroundColor: '#bdc3c7'
                 }}
+              className="my-2 custom-popover"
             >
               <MDBPopoverHeader >
                 <MDBTypography tag='h6'>
