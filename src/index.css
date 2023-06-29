@@ -234,6 +234,10 @@ hr {
   overflow: visible;
 }
 
+.Carousel-Item .src {
+    height: 50%;
+}
+
 .cookie-consent-overlay {
   position: fixed;
   bottom: 0;

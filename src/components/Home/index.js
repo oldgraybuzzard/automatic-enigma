@@ -14,7 +14,7 @@ function Home() {
   return (
     <section className="hero">
       <Row>
-      <h1 className="text-center mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">{capitalizeFirstLetter('The Success of Your Mission Is Our Mission!')}</h1>
+      {/* <h1 className="text-center mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">{capitalizeFirstLetter('The Success of Your Mission Is Our Mission!')}</h1> */}
       </Row>
     <MDBCarousel showControls showIndicators dealy={8000}>
       <MDBCarouselItem
