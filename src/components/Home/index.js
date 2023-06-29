@@ -14,44 +14,44 @@ function Home() {
   return (
     <section className="hero">
       <Row>
-      {/* <h1 className="text-center mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4">{capitalizeFirstLetter('The Success of Your Mission Is Our Mission!')}</h1> */}
+      <h1 className="text-center mbr-section-title mbr-fonts-style mbr-pt-1 mbr-bold display-4 p-3">{capitalizeFirstLetter('The Success of Your Mission Is Our Mission!')}</h1>
       </Row>
     <MDBCarousel showControls showIndicators dealy={8000}>
       <MDBCarouselItem
-          className="d-block w-100 carouselImage"
+          className="d-block w-100"
           itemId={1}
           src={hero1}
           alt="Blackbaord with the word Problem and Solution"
       >
-          {capitalizeFirstLetter}<h3>Identifying problems.</h3>
-          {capitalizeFirstLetter}<p>Delivering Innovative Solutions.</p>
+          <h2>{capitalizeFirstLetter('Identifying Problems.')}</h2>
+          <p>{capitalizeFirstLetter('Delivering Innovative Solutions.')}</p>
       </MDBCarouselItem>
       
       <MDBCarouselItem
-          className="d-block w-100 carouselImage"
+          className="d-block w-100"
           itemId={2}
           src={hero2}
           alt="Military vessel at sea"
       >
-          {capitalizeFirstLetter}<h3>Assisting Our Clients with State-of-the-Art Solutions.</h3>
-          {capitalizeFirstLetter}<p>From High-Tech Simulators to Realistic Training Environments.</p>
+          <h2>{capitalizeFirstLetter('Assisting Our Clients with State-of-the-Art Solutions.')}</h2>
+          <p>{capitalizeFirstLetter('From High-Tech Simulators to Realistic Training Environments.')}</p>
       </MDBCarouselItem>
       <MDBCarouselItem
-          className="d-block w-100 carouselImage"
+          className="d-block w-100"
           itemId={3}
           src={hero3}
           alt="HTML code"
       >
-        <h3>{capitalizeFirstLetter('Unlocking Efficiency and Enhancing Accessibility with Interactive Electronic Technical Manuals (IETMs)')}</h3>
+        <h2>{capitalizeFirstLetter('Unlocking Efficiency and Enhancing Accessibility with Interactive Electronic Technical Manuals (IETMs)')}</h2>
         <p>{capitalizeFirstLetter('Delivering Interactive and Intuitive Technical Documentation Solutions.')}</p>
       </MDBCarouselItem>
       <MDBCarouselItem
-          className="d-block w-100 carouselImage"
+          className="d-block w-100"
           itemId={4}
           src={hero4}
           alt="Chessboard with pieces"
       >
-        <h3>{capitalizeFirstLetter('Streamline Your Projects with Expert Management.')}</h3>
+        <h2>{capitalizeFirstLetter('Streamline Your Projects with Expert Management.')}</h2>
       </MDBCarouselItem>
     </MDBCarousel>
   </section>      

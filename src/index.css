@@ -234,8 +234,9 @@ hr {
   overflow: visible;
 }
 
-.Carousel-Item .src {
-    height: 50%;
+.custom-dropdown-menu {
+  width: 200px; /* Set the desired width here */
+  color: #000000;
 }
 
 .cookie-consent-overlay {
