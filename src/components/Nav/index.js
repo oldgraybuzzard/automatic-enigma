@@ -7,13 +7,13 @@ import {
   MDBCollapse,
   MDBNavbarNav,
   MDBNavbarItem,
-  MDBNavbarLink,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBBtn,
-  MDBIcon
+  MDBIcon,
+  MDBNavbarLink
 } from 'mdb-react-ui-kit';
 import { Link } from 'react-router-dom';
 import { capitalizeFirstLetter } from '../../utils/helpers';
@@ -60,7 +60,7 @@ function Navigation() {
   return (
     <MDBNavbar expand="lg" light bgColor='light' sticky className='text-dark'>
       <MDBContainer fluid>
-        <MDBNavbarBrand as={Link} to="/">
+        <MDBNavbarBrand link href="/">
           <img
             className="logo"
             src={melkenLogo}
@@ -92,6 +92,7 @@ function Navigation() {
               <MDBDropdownMenu>
                 {serviceList.map((service) => (
                   <MDBDropdownItem
+                    link
                     href={service.link}
                     className={`mx-1 ${currentService.name === service.name ? 'navActive' : ''} custom-dropdown-menu`}
                     key={service.name}
@@ -108,8 +109,8 @@ function Navigation() {
                 Government
               </MDBDropdownToggle>
               <MDBDropdownMenu className='p-2 fs-6 custom-dropdown-menu'>
-                <MDBDropdownItem href="#capability">Capability Statement</MDBDropdownItem>
-                <MDBDropdownItem href="#contract-vehicles">Contract Vehicles</MDBDropdownItem>
+                <MDBDropdownItem link href="#capability">Capability Statement</MDBDropdownItem>
+                <MDBDropdownItem link href="#contract-vehicles">Contract Vehicles</MDBDropdownItem>
               </MDBDropdownMenu>
             </MDBDropdown>
 
@@ -118,8 +119,8 @@ function Navigation() {
                 About
               </MDBDropdownToggle>
               <MDBDropdownMenu className='p-2 fs-6 custom-dropdown-menu'>
-                <MDBDropdownItem href="#history">History</MDBDropdownItem>
-                <MDBDropdownItem href="#certifications">Certifications</MDBDropdownItem>
+                <MDBDropdownItem link href="#history">History</MDBDropdownItem>
+                <MDBDropdownItem link href="#certifications">Certifications</MDBDropdownItem>
               </MDBDropdownMenu>
             </MDBDropdown>
 
@@ -128,9 +129,9 @@ function Navigation() {
                 Resources
               </MDBDropdownToggle >
               <MDBDropdownMenu className='p-2 fs-6 custom-dropdown-menu'>
-                <MDBDropdownItem href="#news">News</MDBDropdownItem>
-                <MDBDropdownItem href="#success">Success Cases</MDBDropdownItem>
-                <MDBDropdownItem href="https://melkensolutions.wordpress.com/" target="_blank">
+                <MDBDropdownItem link href="#news">News</MDBDropdownItem>
+                <MDBDropdownItem link href="#success">Success Cases</MDBDropdownItem>
+                <MDBDropdownItem link href="https://melkensolutions.wordpress.com/" target="_blank">
                   Blog
                 </MDBDropdownItem>
               </MDBDropdownMenu>

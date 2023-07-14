@@ -21,7 +21,7 @@ function Home() {
           className="d-block w-100"
           itemId={1}
           src={hero1}
-          alt="Blackbaord with the word Problem and Solution"
+          alt="Blackbaord with the words Problem and Solution"
       >
           <h2>{capitalizeFirstLetter('Identifying Problems.')}</h2>
           <p>{capitalizeFirstLetter('Delivering Innovative Solutions.')}</p>
